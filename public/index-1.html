@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Web Assignment 0</title>
+  <meta name="description" content="First web assignment">
+  <meta name="author" content="student name">
+  <style ="font-family: Segoe UI"></style>
+  <link rel="stylesheet" href="nutrikit.css">
+  <script src="nutrikit.js"></script>
+
+  
+</head>
+<body>
+    <h1 class="header">Nurtikit Food Planner</h1>
+    <h3 class="header">NutriKit allows you to select your groceries, and track your nutritional progress (good or bad)</h3>
+
+    <div class="grid-container">
+
+        <div class="grid-item">
+            Categories
+        </div>
+        <div class="grid-item">
+            Menu Items
+        </div>
+        <div class="grid-item">
+            
+        </div>
+        <div class="grid-item">
+            Selected Items
+        </div>
+
+
+        <div class="grid-item">
+            <select class="top" id="foodGroupList" name="foods" onchange="getFoods()">
+                <option value="proteins">proteins</option>
+                <option value="fruits">fruits</option>
+                <option value="vegetables">vegetables</option>
+                <option value="dairy">dairy</option>
+                <option value="grains">grains</option>
+            </select>
+        </div>
+        
+        <div class="grid-item">
+            <select class="selectBox" id="foodbox" name="foods" size="5" onclick="updateButton(this)">  
+                <option id="default" value="">Select a category</option>
+            </select>  
+        </div>
+        
+        <div class="grid-item">
+            <button id="updateButton" class="button" type="button" >>></button>
+        </div>
+        
+        <div class="grid-item">
+            <select class="selectBox" id="selectedBox" name="selections" size="5" onclick="updateButton(this)">  
+                
+            </select> 
+            <p>
+                Total Calories: 
+                <label id="totalCalories" value="0">0</label>
+            </p>
+            
+        </div>
+
+    </div>
+</body>
+</html>
