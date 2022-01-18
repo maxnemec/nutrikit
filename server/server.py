@@ -1,16 +1,21 @@
 from flask import Flask
 from flask_restful import Api
-
+from flask.helpers import send_from_directory
+from  flask_cors import CORS, cross_origin
 
 
 from server.api import *
 from server.api.resources import *
 
 app = Flask(__name__, static_folder='mjn7597-react/build', static_url_path='') #create Flask instance
+CORS(app)
 
 api = Api(app) #api router
 
-
+@app.route('/')
+@cross_origin()
+def serve():
+    return send_from_directory(app.static_folder, 'index.html')
 
 
 api.add_resource(FetchData,'/fetchData')
