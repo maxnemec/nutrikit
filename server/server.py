@@ -2,12 +2,16 @@ from flask import Flask
 from flask_restful import Resource, Api
 
 
+
 from api.swen_344_db_utils import *
 from api.resources import *
 
 app = Flask(__name__) #create Flask instance
 
 api = Api(app) #api router
+
+
+
 
 api.add_resource(FetchData,'/fetchData')
 api.add_resource(GetFood, '/getFood/<string:food>')

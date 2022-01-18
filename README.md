@@ -1,4 +1,4 @@
-#Nutrikit
+Nutrikit
 
 Nutrikit is a full stack application that allows users to track their macronutrients and total calories
 
