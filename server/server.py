@@ -10,13 +10,14 @@ from server.api.resources import *
 app = Flask(__name__, static_folder='mjn7597-react/build', static_url_path='') #create Flask instance
 CORS(app)
 
-api = Api(app) #api router
+
 
 @app.route('/')
 @cross_origin()
 def serve():
     return send_from_directory(app.static_folder, 'index.html')
 
+api = Api(app) #api router
 
 api.add_resource(FetchData,'/fetchData')
 api.add_resource(GetFood, '/getFood/<string:food>')
