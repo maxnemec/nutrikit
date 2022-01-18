@@ -3,6 +3,7 @@ import yaml
 import os
 
 def connect():
+    print("curr directory: " + os.getcwd)
     config = {}
     yml_path = '../server/api/db.yml'
     with open(yml_path, 'r') as file:
@@ -15,7 +16,8 @@ def connect():
                             port=config['port'])
 
 def exec_sql_file(path):
-    full_path = '../server/api/' + path
+    print("curr directory: " + os.getcwd)
+    full_path = 'server/api/db.yml' + path
     conn = connect()
     cur = conn.cursor()
     with open(full_path, 'r') as file:
