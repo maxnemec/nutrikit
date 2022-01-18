@@ -30,7 +30,7 @@ api.add_resource(UpdateGoals, '/updateGoals')
 
 if __name__ == '__main__':
     print("Loading db")
-    app.logger.info("curr directory: " + os.getcwd)
+    print("curr directory: " + os.getcwd)
     exec_sql_file('foodData.sql')
     exec_sql_file('nutritionGoals.sql')
     print("Starting flask")
