@@ -3,7 +3,7 @@ import yaml
 import os
 
 def connect():
-    print("curr directory: " + os.getcwd)
+    print("curr directory: %s" % os.getcwd())
     config = {}
     yml_path = '../server/api/db.yml'
     with open(yml_path, 'r') as file:
