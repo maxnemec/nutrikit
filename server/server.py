@@ -1,10 +1,10 @@
 from flask import Flask
-from flask_restful import Resource, Api
+from flask_restful import Api
 
 
 
-from api.swen_344_db_utils import *
-from api.resources import *
+from nutrikit.server.api import *
+from nutrikit.server.api.resources import *
 
 app = Flask(__name__, static_folder='mjn7597-react/build', static_url_path='') #create Flask instance
 
