@@ -7,7 +7,7 @@ from  flask_cors import CORS, cross_origin
 from server.api import *
 from server.api.resources import *
 
-app = Flask(__name__, static_folder='mjn7597-react/build', static_url_path='') #create Flask instance
+app = Flask(__name__, static_folder='../mjn7597-react/build', static_url_path='') #create Flask instance
 CORS(app)
 
 
