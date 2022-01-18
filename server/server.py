@@ -6,7 +6,7 @@ from flask_restful import Resource, Api
 from api.swen_344_db_utils import *
 from api.resources import *
 
-app = Flask(__name__) #create Flask instance
+app = Flask(__name__, static_folder='mjn7597-react/build') #create Flask instance
 
 api = Api(app) #api router
 
