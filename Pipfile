@@ -9,6 +9,7 @@ psycopg2-binary = "*"
 flask-sqlalchemy = "*"
 gunicorn = "*"
 flask-restful = "*"
+pyyaml = "*"
 
 [dev-packages]
 
