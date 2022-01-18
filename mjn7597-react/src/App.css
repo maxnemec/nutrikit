@@ -15,9 +15,6 @@
   height: 100%;
 }
 
-.progress {
-  height: 500px;
-}
 
 .selectBox {
   width: 100%;
@@ -36,4 +33,4 @@
   padding-bottom: 1ch;
 }
 
-body {background-color: beige;}
+
