@@ -16,7 +16,7 @@ def connect():
                             port=config['port'])
 
 def exec_sql_file(path):
-    print("curr directory: " + os.getcwd)
+    print("curr directory: %s" % os.getcwd())
     full_path = 'server/api/db.yml' + path
     conn = connect()
     cur = conn.cursor()
