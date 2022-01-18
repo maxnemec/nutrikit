@@ -4,7 +4,7 @@ import os
 
 def connect():
     config = {}
-    yml_path = os.path.join(os.path.dirname(__file__), 'db.yml')
+    yml_path = 'server/api/db.yml'
     with open(yml_path, 'r') as file:
         config = yaml.load(file, Loader=yaml.FullLoader)
 
@@ -15,7 +15,7 @@ def connect():
                             port=config['port'])
 
 def exec_sql_file(path):
-    full_path = os.path.join(os.path.dirname(__file__), f'{path}')
+    full_path = 'server/api/' + path
     conn = connect()
     cur = conn.cursor()
     with open(full_path, 'r') as file:
