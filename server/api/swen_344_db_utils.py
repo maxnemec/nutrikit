@@ -3,19 +3,23 @@ import yaml
 import os
 
 def connect():
-    
-    config = {}
-    print("current directory path: %s" % os.path.dirname(os.getcwd()))
-    yml_path = os.path.join(os.path.dirname(__file__), 'db.yml')
-    with open(yml_path, 'r') as file:
-        config = yaml.load(file, Loader=yaml.FullLoader)
-
-    return psycopg2.connect(dbname=config['database'],
-                            user=config['user'],
-                            password=config['password'],
-                            host=config['host'],
-                            port=config['port'])
-
+    if(os.environ['DEV'] == 'true'):
+        config = {}
+        yml_path = os.path.join(os.path.dirname(__file__), 'db.yml')
+        with open(yml_path, 'r') as file:
+            config = yaml.load(file, Loader=yaml.FullLoader)
+        return psycopg2.connect(dbname=config['database'],
+                                user=config['user'],
+                                password=config['password'],
+                                host=config['host'],
+                                port=config['port'])
+  
+    else:
+        return psycopg2.connect(dbname=os.environ['DATABASE_NAME'],
+                                user=os.environ['DATABASE_USER'],
+                                password=os.environ['DATABASE_PASSWORD'],
+                                host=os.environ['DATABASE_HOST'],
+                                port=os.environ['DATABASE_PORT'])
 def exec_sql_file(path):
     full_path = os.path.join(os.path.dirname(__file__), f'{path}')
     conn = connect()
