@@ -5,8 +5,8 @@ from  flask_cors import CORS, cross_origin
 import yaml
 
 
-from server.api import *
-from server.api.resources import *
+from nutrikit.server.api import *
+from nutrikit.server.api.resources import *
 
 app = Flask(__name__, static_folder='../mjn7597-react/build', static_url_path='') #create Flask instance
 CORS(app)
