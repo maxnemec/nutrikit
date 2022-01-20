@@ -2,7 +2,7 @@ from flask import Flask
 from flask_restful import Api
 from flask.helpers import send_from_directory
 from  flask_cors import CORS, cross_origin
-import yaml
+
 
 
 from server.api import *
