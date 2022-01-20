@@ -1,7 +1,7 @@
 {
   "name": "mjn7597-react",
   "version": "0.1.0",
-  "proxy": "http://localhost:5000",
+  "proxy": "postgres://gceiussbzwiype:03b234eddc5ab04ffdb05a2ae35893edd72c0ddf79026276b39f333ced13df59@ec2-44-198-151-32.compute-1.amazonaws.com:5432/d9q242375ema6k",
   "homepage": ".",
   "private": true,
   "dependencies": {
