@@ -29,7 +29,9 @@ api.add_resource(FetchGoalData, '/fetchGoalData')
 api.add_resource(UpdateGoals, '/updateGoals')
 
 if __name__ == '__main__':
+    print("before run happens")
     app.run()
+    print("after run happens")
     print("Loading db")
     exec_sql_file('foodData.sql')
     exec_sql_file('nutritionGoals.sql')
