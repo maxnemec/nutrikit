@@ -29,8 +29,8 @@ api.add_resource(FetchGoalData, '/fetchGoalData')
 api.add_resource(UpdateGoals, '/updateGoals')
 
 if __name__ == '__main__':
+    app.run()
     print("Loading db")
     exec_sql_file('foodData.sql')
     exec_sql_file('nutritionGoals.sql')
-    print("Starting flask")
-    app.run() #starts Flask
+    print("Starting flask") #starts Flask

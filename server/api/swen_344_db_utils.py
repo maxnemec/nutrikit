@@ -21,6 +21,7 @@ def connect():
                                 host=os.environ['DATABASE_HOST'],
                                 port=os.environ['DATABASE_PORT'])
 def exec_sql_file(path):
+    print("exec_sql_file is called")
     full_path = os.path.join(os.path.dirname(__file__), f'{path}')
     conn = connect()
     cur = conn.cursor()
