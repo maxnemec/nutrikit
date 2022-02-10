@@ -11,8 +11,7 @@ class MyHeader extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <h1 className="header">Nurtikit Food Planner</h1>
-                <h6 className="header">NutriKit allows you to select your groceries, and track your nutritional progress (good or bad)</h6>
+                <h1 className="header">Nutrikit Food Planner</h1>
             </React.Fragment>
         );
     }

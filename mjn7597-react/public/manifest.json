@@ -1,19 +1,19 @@
 {
   "short_name": "Nutrikit",
-  "name": "Nutrikit nutrition planner",
+  "name": "Nutrikit",
   "icons": [
     {
-      "src": "NutriKit-Logo.ico",
+      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "nutrikit-logo.jpg",
+      "src": "favicon.jpg",
       "type": "image/jpg",
       "sizes": "192x192"
     },
     {
-      "src": "nutrikit-logo.jpg",
+      "src": "favicon.jpg",
       "type": "image/jpg",
       "sizes": "512x512"
     }
